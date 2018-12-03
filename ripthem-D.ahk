@@ -1,16 +1,3 @@
-/*
-========================================================================================
-Script Constantly scans DVD drive for DVD. Upon Insertion it Rips/Compresses/Transcodes 
-Utilizes DvdDecrypter & HandBrake, Download these and install them with default settings
-
-*Modified 7/17/2012 by amsgwp
-	-Converted to utilize MakeMKV instead of DVD Decrypter
-	-Modified File Exist
-	-Modified to work with bluray
-
-http://www.autohotkey.com/community/viewtopic.php?f=2&t=49262&view=previous
-========================================================================================
-*/
 #singleInstance
 #NoEnv
 
