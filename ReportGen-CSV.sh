@@ -2,5 +2,5 @@ sudo -u stc-director psql -c "COPY (select machine.name,state,end_time,last_upda
 sudo cp /tmp/Weekly-Report.csv /opt/StorageCraft/share/StorageCraft/static/
 echo -e "Subject:ShadowXafe Weekly Report \n\n Here is your weekly Report\n" > /tmp/mail.txt
 uuencode /tmp/Weekly-Report.csv Weekly-Report.csv >> /tmp/mail.txt
-cat /tmp/mail.txt | sendmail jaydenthorup@jayfiles.com
+cat /tmp/mail.txt | sendmail <Email Address>
 
