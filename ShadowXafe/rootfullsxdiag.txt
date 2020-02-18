@@ -1,0 +1,23 @@
+#! /bin/bash
+#sudo rm /var/crash/tmp/sxdiag.zip
+sudo -u stc-director pg_dump > /var/crash/tmp/db.txt
+sudo cat /proc/mounts > /var/crash/tmp/mounts.txt
+sudo lsblk > /var/crash/tmp/disks.txt
+sudo vmtoolsd --cmd "info-get guestinfo.ovfEnv" > /var/crash/tmp/ovfenv.xml
+sudo rpm -qa > /var/crash/tmp/rpm-qa.txt
+sudo systemctl -a > /var/crash/tmp/systemctl-a.txt
+sudo ps -aux > /var/crash/tmp/processes.txt
+sudo netstat -aep > /var/crash/tmp/netstat.txt
+journalctl --no-pager > /var/crash/tmp/journalctl.txt
+sudo zip -u -9 /var/crash/tmp/sxdiag.zip /var/crash/tmp/mounts.txt
+sudo zip -u -9 /var/crash/tmp/sxdiag.zip /var/crash/tmp/disks.txt
+sudo zip -u -9 /var/crash/tmp/sxdiag.zip /var/crash/tmp/ovfenv.xml
+sudo zip -u -9 /var/crash/tmp/sxdiag.zip /var/crash/tmp/rpm-qa.txt
+sudo zip -u -9 /var/crash/tmp/sxdiag.zip /var/crash/tmp/systemctl-a.txt
+sudo zip -u -9 /var/crash/tmp/sxdiag.zip /var/crash/tmp/processes.txt
+sudo zip -u -9 /var/crash/tmp/sxdiag.zip /var/crash/tmp/netstat.txt
+sudo zip -u -9 /var/crash/tmp/sxdiag.zip /var/opt/StorageCraft/common/common.env >/dev/null
+sudo zip -u -9 /var/crash/tmp/sxdiag.zip /var/crash/tmp/db.txt
+sudo zip -u -9 /var/crash/tmp/sxdiag.zip /var/crash/tmp/journalctl.txt
+echo download at 
+echo https://$HOSTNAME/sxdiag.zip or pull from /var/crash/tmp/sxdiag.zip
