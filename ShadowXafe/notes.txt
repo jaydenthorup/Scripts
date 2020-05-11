@@ -5,3 +5,7 @@ mount | grep stc
 dot -Tsvg /tmp/jayden.dot > /tmp/jayden.svg
 
 
+Solid arrows down are the child depending on the parent; dashed is parent knowing it has a child.  Normally bi-directional.  
+ 
+If an an oval has _no_ arrows, then it's totally lost, delete it manually.  If it has just one arrow, may have caught it while it was being created, proceed carefully.
+
