@@ -1,0 +1,6 @@
+mount | grep stc 
+./graph.sh /run/stc-agent/52d869fa-4a17-453b-8170-0c8ef3db7395/nfs_storagecraft_IhoEtE/ jayden
+
+dot -Tsvg /tmp/jayden.dot > /tmp/jayden.svg
+
+
