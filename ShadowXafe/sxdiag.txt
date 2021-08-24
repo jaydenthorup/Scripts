@@ -1,0 +1,21 @@
+sudo -u stc-director pg_dump > /tmp/db.txt
+sudo cat /proc/mounts > /tmp/mounts.txt
+sudo lsblk > /tmp/disks.txt
+sudo vmtoolsd --cmd "info-get guestinfo.ovfEnv" > /tmp/ovfenv.xml
+sudo rpm -qa > /tmp/rpm-qa.txt
+sudo systemctl -a > /tmp/systemctl-a.txt
+sudo ps -aux > /tmp/processes.txt
+sudo netstat -aep > /tmp/netstat.txt
+journalctl --no-pager > /tmp/journalctl.txt
+sudo zip -u -9 /opt/StorageCraft/share/StorageCraft/static/sxdiag.zip /tmp/mounts.txt
+sudo zip -u -9 /opt/StorageCraft/share/StorageCraft/static/sxdiag.zip /tmp/disks.txt
+sudo zip -u -9 /opt/StorageCraft/share/StorageCraft/static/sxdiag.zip /tmp/ovfenv.xml
+sudo zip -u -9 /opt/StorageCraft/share/StorageCraft/static/sxdiag.zip /tmp/rpm-qa.txt
+sudo zip -u -9 /opt/StorageCraft/share/StorageCraft/static/sxdiag.zip /tmp/systemctl-a.txt
+sudo zip -u -9 /opt/StorageCraft/share/StorageCraft/static/sxdiag.zip /tmp/processes.txt
+sudo zip -u -9 /opt/StorageCraft/share/StorageCraft/static/sxdiag.zip /tmp/netstat.txt
+sudo zip -u -9 /opt/StorageCraft/share/StorageCraft/static/sxdiag.zip /var/opt/StorageCraft/common/common.env >/dev/null
+sudo zip -u -9 /opt/StorageCraft/share/StorageCraft/static/sxdiag.zip /tmp/db.txt
+sudo zip -u -9 /opt/StorageCraft/share/StorageCraft/static/sxdiag.zip /tmp/journalctl.txt
+echo download at 
+echo https://$HOSTNAME/sxdiag.zip or pull from /opt/StorageCraft/share/StorageCraft/static/sxdiag.zip
