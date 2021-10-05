@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<AnalyseDoc xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="./AnalyseDoc.xsd">
+    <SearchText matchCase="true" color="white" bgColor="darkBlue">spx service s</SearchText>
+    <SearchText searchType="regex" matchCase="true" color="white" bgColor="darkGreen">- backup start|- backup stop|Backup completed|BackupJob|Version</SearchText>
+    <SearchText searchType="regex" matchCase="true" color="blue">Progress \\|MD5</SearchText>
+    <SearchText matchCase="true" bgColor="liteGreen">backup success</SearchText>
+    <SearchText matchCase="true" bgColor="darkYellow">differential</SearchText>
+    <SearchText searchType="regex" matchCase="true" color="white" bgColor="grey">Snapshot</SearchText>
+    <SearchText bgColor="liteGreen">license activated</SearchText>
+    <SearchText matchCase="true" bgColor="veryLiteBlue">Requested backup type</SearchText>
+    <SearchText searchType="regex" matchCase="true" wholeWord="true" bgColor="veryLiteBlue">VirtualBoot|header values|vdiff|next file guid for|filesystem info on|creating the index file on|.xsp|command:|startvm|Output:|VM|hypervisor|result:</SearchText>
+    <SearchText searchType="regex" matchCase="true" wholeWord="true" bgColor="veryLiteBlue">UnmountImage</SearchText>
+    <SearchText searchType="regex" matchCase="true" color="red">.error | W </SearchText>
+    <SearchText searchType="regex" matchCase="true" color="red" bgColor="yellow">VSS phase |PROVIDER|fail|backup.warn.unmanaged_chain</SearchText>
+    <SearchText searchType="regex" matchCase="true" wholeWord="true" color="white" bgColor="red">Error| E </SearchText>
+    <SearchText searchType="regex" color="white" bgColor="red" comment="iFTP">code=|FTPException</SearchText>
+    <SearchText doSearch="false" searchType="regex" matchCase="true" wholeWord="true" color="liteBlue">spx_service.helper.imagescan |confirmed access to Destination</SearchText>
+    <SearchText doSearch="false" searchType="regex" matchCase="true" wholeWord="true" color="blueGreen">D </SearchText>
+    <SearchText doSearch="false" searchType="regex" wholeWord="true" bgColor="veryLiteGrey" comment="DTX">Operating System:|Platform:|stcvsm|StorageCraft |VirtualBox|Package: | SQL| Exchange|SharePoint| Filezilla| uptime|Provisioning:</SearchText>
+</AnalyseDoc>
